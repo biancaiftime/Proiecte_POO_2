@@ -29,3 +29,12 @@ void PriorityQueue<T>::pop()
         this->prim->info=max_value;
     }
 }
+template <class T>
+PriorityQueue<T> PriorityQueue<T>::operator +(coada<T>&c)const
+{
+    PriorityQueue<T>p;
+    p=(*this);
+    nod<T>*q;
+    for(q=c.Adress();q!=NULL;q=q->next)p.push_b(q->info);
+    return p;
+}

@@ -6,9 +6,11 @@ using namespace std;
 
 int main()
 {
-    coada<char>*c;
-    c=new PriorityQueue<char>;
-    cin>>(*c);
-    cout<<(*c);
+    PriorityQueue<char>p;
+    coada<char>c;
+    cin>>p;
+    cin>>c;
+    PriorityQueue<char>a=p+c;
+    cout<<a;
     return 0;
 }

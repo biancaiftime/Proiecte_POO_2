@@ -10,11 +10,11 @@ class coada
         coada();
         coada(const T value);
         coada(const coada<T>&);
-        ~coada();
+        virtual ~coada();
         virtual void push_b(const T value);
         virtual void pop();
         T top();
-        coada<T> &operator+(const coada<T>&)const;
+        virtual coada<T> &operator+(const coada<T>&)const;
         coada<T> &operator=(const coada<T>&);
         coada<T> &operator-(const coada<T>&)const;
         bool operator ==(const coada<T>&)const;
@@ -25,6 +25,7 @@ class coada
         template <class U>
         friend ostream &operator<<(ostream &,coada<U>&);
         int GetDim();
+        nod<T>*Adress();
     protected:
         nod<T> *prim;
         nod<T> *ultim;

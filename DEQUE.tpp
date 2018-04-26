@@ -6,6 +6,7 @@ void DEQUE<T>::push_f(const T value)
     nod<T>*p=new nod<T>;
     p->info=value;
     p->next=this->prim;
+    if(this->ultim==NULL)this->ultim=p;
     this->prim=p;
     ++this->dim_max;
 }

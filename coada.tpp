@@ -147,3 +147,8 @@ bool coada<T>::operator<(const coada<T>&c)const
         if(p->info>q->info)return 0;
     return 1;
 }
+template <class T>
+nod<T> * coada<T>::Adress()
+{
+    return this->prim;
+}
